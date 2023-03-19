@@ -12,6 +12,8 @@ public class ApplicationManager {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         wd = new ChromeDriver(options);
+        wd.manage().window().maximize();
+        wd.manage().timeouts().implicitlyWait(5);
         //wd=new ChromeDriver();
         wd.navigate().to("https://trello.com/");
 
