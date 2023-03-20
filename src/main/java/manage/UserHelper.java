@@ -15,6 +15,7 @@ public class UserHelper extends HelperBase{
     public void fillingLoginForm(String email, String password) {
         type(By.cssSelector("#user"), email);
         click(By.cssSelector("#login"));
+        pause(2000);
         type(By.cssSelector("#password"), password);
     }
 
