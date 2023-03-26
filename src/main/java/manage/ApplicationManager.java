@@ -9,6 +9,7 @@ import java.time.Duration;
 public class ApplicationManager {
     WebDriver wd;
     UserHelper user;
+    BoardHelper board;
 
     public void init(){
         ChromeOptions options = new ChromeOptions();
@@ -20,10 +21,18 @@ public class ApplicationManager {
         wd.navigate().to("https://trello.com/");
 
         user = new UserHelper(wd);
+        board = new BoardHelper(wd);
+        user.login("amaverik281@gmail.com", "^94NqXC,5fxvUQ=");
+
+
     }
 
     public UserHelper getUser() {
         return user;
+    }
+
+    public BoardHelper getBoard() {
+        return board;
     }
 
     public void quit(){
