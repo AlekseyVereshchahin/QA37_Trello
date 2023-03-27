@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class BoardCreation extends TestBase {
@@ -10,10 +11,13 @@ public class BoardCreation extends TestBase {
         app.getBoard().initBoardCreationFromHeader();
         app.getBoard().fillInBoardCreationForm("qa37");
         //app.getBoard().scrollDownTheForm();
-        app.getBoard().pause(2000);
+        app.getBoard().pause(6000);
         app.getBoard().submitBoardCreation();
         app.getBoard().pause(2000);
         app.getBoard().isCreated();
+
+        Assert.assertTrue(app.getBoard().isCreated());
+
 
 
     }

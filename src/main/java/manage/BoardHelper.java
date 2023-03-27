@@ -13,8 +13,8 @@ public class BoardHelper extends HelperBase{
 
     public void initBoardCreationFromHeader() {
         click(By.cssSelector("[data-testid='header-create-menu-button']"));
-        click(By.cssSelector("[aria-label='BoardIcon']"));
-       // click(By.cssSelector("[data-testid='header-create-board-button']"));
+        //click(By.cssSelector("[aria-label='BoardIcon']"));
+        click(By.cssSelector("[data-testid='header-create-board-button']"));
 
     }
 
@@ -22,6 +22,7 @@ public class BoardHelper extends HelperBase{
         type(By.cssSelector("[data-testid='create-board-title-input']"),title);
 
     }
+
 
     public void submitBoardCreation() {
         click(By.cssSelector("[data-testid='create-board-submit-button']"));
