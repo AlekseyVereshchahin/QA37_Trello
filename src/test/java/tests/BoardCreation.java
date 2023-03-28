@@ -17,8 +17,8 @@ public class BoardCreation extends TestBase {
         app.getBoard().isCreated();
 
         Assert.assertTrue(app.getBoard().isCreated());
-
-
-
     }
+
+    
+
 }
