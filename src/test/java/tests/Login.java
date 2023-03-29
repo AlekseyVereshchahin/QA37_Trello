@@ -20,7 +20,7 @@ public class Login extends TestBase {
         app.getUser().pause(2000);
 
         app.getUser().fillingLoginForm("amaverik281@gmail.com", "^94NqXC,5fxvUQ=");
-        app.getUser().pause(2000);
+        app.getUser().pause(5000);
 
         app.getUser().submitLogin();
         app.getUser().pause(2000);

@@ -13,13 +13,14 @@ public class BoardHelper extends HelperBase{
 
     public void initBoardCreationFromHeader() {
         click(By.cssSelector("[data-testid='header-create-menu-button']"));
-        //click(By.cssSelector("[aria-label='BoardIcon']"));
+//        click(By.cssSelector("[aria-label='BoardIcon']"));
         click(By.cssSelector("[data-testid='header-create-board-button']"));
 
     }
 
     public void fillInBoardCreationForm(String title) {
         type(By.cssSelector("[data-testid='create-board-title-input']"),title);
+
 
     }
 
@@ -41,5 +42,39 @@ public class BoardHelper extends HelperBase{
 
     public boolean isCreated() {
         return wd.findElements(By.cssSelector(".list-name-input")).size()>0;
+    }
+
+    public void returnToHomePage() {
+        click(By.cssSelector(".qsCZSrobO7JoSv"));
+    }
+
+    public int getBoardCount() {
+        return wd.findElements(By.cssSelector(".board-tile-details")).size()-1-recentlyViewed();
+    }
+
+    private int recentlyViewed() {
+        return wd.findElements(By.xpath("//*[contains(@class, 'icon-clock')]/../..//div")).size();
+    }
+
+    public void clickTheFirstBoard() {
+        click(By.cssSelector(".board-tile-details"));
+    }
+
+    public void openSideBar() {
+        click(By.cssSelector(".show-sidebar-button-react-root"));
+    }
+
+    public void openMore() {
+        click(By.cssSelector(".js-open-more"));
+    }
+
+    public void closeBoard() {
+        click(By.cssSelector(".js-close-board"));
+        click(By.cssSelector(".js-confirm"));
+    }
+
+    public void deleteBoard() {
+        click(By.cssSelector("[data-testid='close-board-delete-board-button']"));
+        click(By.cssSelector("[data-testid='close-board-delete-board-confirm-button']"));
     }
 }

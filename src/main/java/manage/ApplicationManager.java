@@ -13,12 +13,13 @@ public class ApplicationManager {
 
     public void init(){
         ChromeOptions options = new ChromeOptions();
+        //wd=new ChromeDriver();
         options.addArguments("--remote-allow-origins=*");
         wd = new ChromeDriver(options);
         wd.manage().window().maximize();
         wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        //wd=new ChromeDriver();
-        wd.navigate().to("https://trello.com/");
+
+        wd.navigate().to("https://www.trello.com/");
 
         user = new UserHelper(wd);
         board = new BoardHelper(wd);
