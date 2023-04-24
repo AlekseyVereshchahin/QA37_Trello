@@ -1,0 +1,4 @@
+19:27:49.097 [Test worker] INFO  tests.TestBase - Tests start--> boardCreation1
+19:27:49.117 [Test worker] INFO  tests.TestBase - Board creation--qa37
+19:28:14.984 [Test worker] INFO  tests.TestBase - Board Created
+19:28:14.993 [Test worker] INFO  tests.TestBase - ***************************************************

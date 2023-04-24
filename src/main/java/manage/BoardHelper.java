@@ -1,5 +1,6 @@
 package manage;
 
+import models.Board;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.WebDriver;
@@ -20,10 +21,11 @@ public class BoardHelper extends HelperBase{
 
     public void fillInBoardCreationForm(String title) {
         type(By.cssSelector("[data-testid='create-board-title-input']"),title);
-
-
     }
 
+    public void fillInBoardCreationForm(Board board) {
+        type(By.cssSelector("[data-testid='create-board-title-input']"), board.getTitle());
+    }
 
     public void submitBoardCreation() {
         click(By.cssSelector("[data-testid='create-board-submit-button']"));
